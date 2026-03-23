@@ -1,15 +1,26 @@
 /**
- * Hello App
- * UC3 - Display Hello with Command-Line Argument or Default Message
+ * OOPS Banner App
+ * UC4 - Display Hello with Multiple Command-Line Arguments
  * @author Charan
- * @version 3.0
+ * @version 4.0
  */
 
 public class HelloApp {
+
     public static void main(String[] args) {
 
-        String name = (args.length > 0) ? args[0] : "World";
+        String message;
 
-        System.out.println("Hello, " + name + "!");
+        
+        if (args.length > 0) {
+           
+            String names = String.join(", ", args);
+            message = "Hello, " + names + "!";
+        } else {
+            
+            message = "Hello, World!";
+        }
+
+        System.out.println(message);
     }
 }
