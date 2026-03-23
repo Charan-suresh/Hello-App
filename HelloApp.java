@@ -1,11 +1,21 @@
 /**
  * OOPS Banner App
- * UC1 - Display Hello World
+ * UC2 - Display Hello with Command-Line Argument
  * @author Charan
- * @version 1.0
+ * @version 2.0
  */
+
 public class HelloApp {
+
     public static void main(String[] args) {
-        System.out.println("Hello World");
+
+        
+        if (args.length > 0) {
+            String name = args[0];
+            System.out.println("Hello, " + name + "!");
+        } else {
+            
+            System.out.println("Hello, World!");
+        }
     }
 }
