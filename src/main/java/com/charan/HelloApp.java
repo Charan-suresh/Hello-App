@@ -1,15 +1,24 @@
 package com.charan;
 
+/**
+ * OOPS Banner App
+ * UC4 - Display Hello with Multiple Command-Line Arguments
+ * @author Charan
+ * @version 4.0
+ */
 public class HelloApp {
+
     public static void main(String[] args) {
 
-        if (args.length == 0) {
-            System.out.println("Hello, World!");
+        String message;
+
+        if (args.length > 0) {
+            String names = String.join(", ", args);
+            message = "Hello, " + names + "!";
         } else {
-            for (String name : args) {
-                System.out.println("Hello, " + name + "!");
-            }
+            message = "Hello, World!";
         }
 
+        System.out.println(message);
     }
 }

@@ -1,4 +1,4 @@
-echo "*.class
+*.class
 *.log
 *.jar
 *.war
@@ -8,4 +8,4 @@ build/
 out/
 .idea/
 .vscode/
-.DS_Store" >> .gitignore
+.DS_Store
